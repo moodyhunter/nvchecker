@@ -44,7 +44,7 @@ jobs:
         sudo apt update
         sudo apt install -y libcurl4-openssl-dev
     - name: Install PyPy deps
-      if: ${{ contains(matrix.python_version, 'pypy') }}
+      if: ${{ contains(matrix.python-version, 'pypy') }}
       run: |
         sudo apt update
         sudo apt install -y libxml2-dev
