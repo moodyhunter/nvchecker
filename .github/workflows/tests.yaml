@@ -47,7 +47,7 @@ jobs:
       if: ${{ contains(matrix.python-version, 'pypy') }}
       run: |
         sudo apt update
-        sudo apt install -y libxml2-dev
+        sudo apt install -y libxml2-dev libxslt1-dev
     - name: Install Python deps
       run: pip install -U ${{ matrix.deps }} pytest pytest-asyncio pytest-httpbin flaky structlog toml appdirs lxml
     - name: Decrypt keys
